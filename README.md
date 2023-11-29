@@ -1,1 +1,1 @@
-<h1>Proyecto ecommerce de plantas</h1>
+<h1>Proyecto ecommerce de plantas HomePlants</h1>
