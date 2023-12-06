@@ -1,4 +1,21 @@
 <script setup>
+import { onMounted, ref } from 'vue';
+import axiosClient from "./utils/axios";
+
+const categories = ref([]);
+const fetchCategorias = async () => {
+  try {
+    const dataCategoria = await axiosClient.get("/cc47bc69-6cb8-465e-9661-55daab715e29");
+    categories.value = dataCategoria;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+onMounted (() => {
+  fetchCategorias();
+})
+
 </script>
 
 <template>
@@ -16,11 +33,8 @@
     <section class="category">
       <div class="category__containertitle">
         <h2 class="containertitle__title">Categorías de plantas</h2>
-      </div>
-      
-      <div>
-        
-      </div>
+      </div>      
+      <div v-for="categoria in categories" ></div>
     </section>
   </main>
 </template>
