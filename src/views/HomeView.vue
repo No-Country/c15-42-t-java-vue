@@ -1,58 +1,35 @@
-<script setup>
-import { onMounted, ref } from 'vue';
-import axiosClient from "./utils/axios";
-
-const categories = ref([]);
-const fetchCategorias = async () => {
-  try {
-    const dataCategoria = await axiosClient.get("/cc47bc69-6cb8-465e-9661-55daab715e29");
-    categories.value = dataCategoria;
-  } catch (error) {
-    console.log(error);
-  }
-};
-
-onMounted (() => {
-  fetchCategorias();
-})
-
-</script>
-
 <template>
   <main>
-    <div>
+    <div class="main-content">
       <section class="container-left">
       <h1 class="container-left__message">¡Encuentra la planta perfecta para tu hogar!</h1>
       <p class="container-left__subtitle">Decorativas, útiles en la cocina y además curativas.</p>
+      <div>
+        <button><RouterLink to="/categories">Ver categorías</RouterLink></button>
+      </div>
     </section>
     <section class="container-right">
       <img class="container-right__img" src="/src/assets/img/planta-portada1.png" alt="" srcset="">
     </section>
     </div>
     
-    <section class="category">
-      <div class="category__containertitle">
-        <h2 class="containertitle__title">Categorías de plantas</h2>
-      </div>      
-      <div v-for="categoria in categories" ></div>
-    </section>
+   
   </main>
 </template>
 
 <style scoped>
-  div{
+  .main-content {
     display: flex;
-  align-items: center;
-  column-gap: 140px;
-  padding: 0 10%;
-  margin-top: 5rem;
-  @media(max-width:768px) {
-        flex-direction: column;
-        row-gap: 40px;
-        padding: 7%;
-    }
+    align-items: center;
+    column-gap: 140px;
+    padding: 0 10%;
+    margin-top: 5rem;
+    @media(max-width:768px) {
+          flex-direction: column;
+          row-gap: 40px;
+          padding: 7%;
+      }
   }
-  
 
   .container-left {
     width: 60%;
@@ -77,11 +54,5 @@ onMounted (() => {
   width: 100%;
  }
 
- .category{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  
-  
- }
+ 
 </style>
