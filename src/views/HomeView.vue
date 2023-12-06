@@ -17,14 +17,7 @@
       <div class="category__containertitle">
         <h2 class="containertitle__title">Categorías de plantas</h2>
       </div>
-      <v-card
-    class="mx-auto"
-    max-width="200"
-    height="200"
-    image="https://es.wikipedia.org/wiki/Planta_ornamental#/media/Archivo:Rhododendron_ponticum_(1).jpg"
-    title="Decorativas"
-    background="green"
-  ></v-card>
+      
       <div>
         
       </div>
