@@ -7,8 +7,8 @@
       <section class="container-left">
       <h1 class="container-left__message">¡Encuentra la planta perfecta para tu hogar!</h1>
       <p class="container-left__subtitle">Decorativas, útiles en la cocina y además curativas.</p>
-      <div>
-        <button><RouterLink to="/categories">Ver categorías</RouterLink></button>
+      <div class="button-container">
+        <button><RouterLink to="/categories" class="button">Ver categorías</RouterLink></button>
       </div>
     </section>
     <section class="container-right">
@@ -57,5 +57,16 @@
   width: 100%;
  }
 
+ .button-container {
+  margin-top: 32px;
+ }
+ .button {
+   text-decoration: none;
+   background-color: black;
+   color: white;
+   padding: 12px 12px;
+   border-radius: 16px;
+   height: 40px;
+ }
  
 </style>
