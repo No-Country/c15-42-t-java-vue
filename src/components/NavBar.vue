@@ -27,16 +27,19 @@
         </v-list>
       </v-menu>
     </div>
+    <RouterView />
   </template>
   <script>
   export default {
     data: () => ({
       items: [
-        { title: 'Home' },
+        { title: 'Home', route: '../views/HomeView.vue'},
         { title: 'Productos' },
         { title: 'Carrito' },
         { title: 'Login' },
       ],
+     
+
     }),
   }
 </script>
