@@ -1,11 +1,7 @@
 <script setup>
-import HpHeader from '@/components/HeaderHp.vue'
 </script>
 
 <template>
-  <Header>
-    <HpHeader />
-  </Header>
   <main>
     <div class="main-content">
       <section class="container-left">
