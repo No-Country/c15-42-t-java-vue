@@ -1,0 +1,3 @@
+<template>
+    <h1>Plantas</h1>
+</template>
