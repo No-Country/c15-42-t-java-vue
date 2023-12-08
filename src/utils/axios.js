@@ -1,6 +1,6 @@
-//Instancio el cliente axios
+//Instancia del cliente axios
 import axios from "axios";
 const instance = axios.create({
-    baseURL: 'http://localhost/api',//base de la api
+    baseURL: 'https://run.mocky.io/v3',//base de la api
 })
 export default instance;
