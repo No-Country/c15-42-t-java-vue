@@ -16,30 +16,35 @@
 
 .arreglo {
     display: flex;
-    align-items: center;
-    column-gap: 14px;
+
 }
 
 .logo {
     display: flex;
-    align-items: center;
-    text-decoration: none;
-    column-gap: 8px;
+    position: absolute;
+    top: 20px;
+    text-decoration: inherit;
+    color: black;
+    left: 10px;
 }
 
-.logo:visited {
-    color: black;
-}
-
-.logo:active {
-    color: black;
+.naveg{
+    position: absolute;
+    top: 20px;
+    right: 10px;
 }
 
 h1{
+    margin-top: 10px;
     font-size: 20px;
+    margin-left: 5px;
 }
 .buscador{
+    position: absolute;
     width: 80%;
+    top: 60px;
+    left: 10px;
+    padding: 0;
 }
 
 </style>

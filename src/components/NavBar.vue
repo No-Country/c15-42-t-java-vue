@@ -21,6 +21,7 @@
           <v-list-item
             v-for="(item, i) in items"
             :key="i"
+            route :to="item.route"
           >
             <v-list-item-title>{{ item.title }}</v-list-item-title>
           </v-list-item>
@@ -33,9 +34,9 @@
   export default {
     data: () => ({
       items: [
-        { title: 'Home', route: '../views/HomeView.vue'},
-        { title: 'Productos' },
-        { title: 'Carrito' },
+        { title: 'Home', route: '/'},
+        { title: 'Productos', route: '/categories'},
+        { title: 'Carrito', route: '/cart' },
         { title: 'Login' },
       ],
      
