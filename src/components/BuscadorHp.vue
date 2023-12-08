@@ -1,5 +1,4 @@
 <template>
-    
       <v-card-text>
         <v-text-field
           :loading="loading"

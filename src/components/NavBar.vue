@@ -2,8 +2,6 @@
     <div class="text-right mr-5 ml-5 mt-3">
       <v-menu
         transition="slide-y-transition"
-        
-        
       >
         <template v-slot:activator="{ props }">
           <v-btn
@@ -11,8 +9,6 @@
             v-bind="props"
             icon="true"
             absolute="true"
-            
-            
           >
           <v-icon icon="mdi-menu" />
           </v-btn>
@@ -28,7 +24,6 @@
         </v-list>
       </v-menu>
     </div>
-    <RouterView />
   </template>
   <script>
   export default {

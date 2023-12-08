@@ -16,22 +16,14 @@
 
 .arreglo {
     display: flex;
-
+    align-items: center;
+    column-gap: 12px;
 }
 
 .logo {
     display: flex;
-    position: absolute;
-    top: 20px;
-    text-decoration: inherit;
     color: black;
-    left: 10px;
-}
-
-.naveg{
-    position: absolute;
-    top: 20px;
-    right: 10px;
+    text-decoration: none;
 }
 
 h1{
@@ -40,11 +32,7 @@ h1{
     margin-left: 5px;
 }
 .buscador{
-    position: absolute;
     width: 80%;
-    top: 60px;
-    left: 10px;
-    padding: 0;
 }
 
 </style>
