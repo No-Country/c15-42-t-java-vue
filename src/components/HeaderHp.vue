@@ -10,6 +10,9 @@
         <div class="naveg">
             <NavBar />
         </div>
+        <div class="login">
+            <LoginBtn />
+        </div>
     </div>
 </template>
 <style scoped>
@@ -37,6 +40,7 @@ h1{
 
 </style>
 <script setup>
+import LoginBtn from './InicioLogin.Vue'
 import NavBar from '@/components/NavBar.vue'
 import BuscadorHp from './BuscadorHp.vue'
 import { RouterLink } from 'vue-router';
