@@ -4,9 +4,9 @@
 </script>
 
 <template>
-  <Header>
+  <header>
     <HpHeader />
-  </Header>
+  </header>
   <RouterView />
 </template>
 

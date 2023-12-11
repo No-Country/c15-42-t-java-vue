@@ -1,34 +1,41 @@
 <script setup>
-import axiosClient from '/src/utils/axios'
-import { onMounted, ref } from 'vue'
+  import axiosClient from '/src/utils/axios'
+  import { onMounted, ref  } from 'vue'
+import { RouterLink } from 'vue-router';
 
-const categories = ref([])
-const fetchCategories = async () => {
-  try {
-    const { data } = await axiosClient.get('/cc47bc69-6cb8-465e-9661-55daab715e29')
-    categories.value = data
-  } catch (error) {
-    console.log(error)
+  const categories = ref([])
+  const fetchCategories = async () => {
+    try {
+      const { data } = await axiosClient.get('/287a8b2d-66ca-4539-8969-23a1c1ceb72e')
+      categories.value = data
+    } catch (error) {
+      console.log(error)
+    }
   }
-}
 
-onMounted(() => {
-  fetchCategories()
-})
+  onMounted(() => {
+    fetchCategories()
+  })
 </script>
 
 <template>
   <section class="categories">
     <h2 class="categories-title">Categorías</h2>
     <div class="categories-content">
-      <div v-for="categoria in categories" :key="categoria.id" class="category-card">
-        <div class="category-title">
-          {{ categoria.name }}
+      <RouterLink 
+        v-for="categoria in categories" :key="categoria.id"
+        :to="{name: 'plants', params: {id: categoria.id}}"
+        class="link"
+      >
+        <div class="category-card">
+            <div class="category-title">
+              {{ categoria.name }}
+            </div>
+            <div class="img">
+              <img :src="categoria.imgUrl" alt="" srcset="" class="category-img" />
+            </div>
         </div>
-        <div class="img">
-          <img :src="categoria.imgUrl" alt="" srcset="" class="category-img" />
-        </div>
-      </div>
+      </RouterLink>
     </div>
   </section>
 </template>
@@ -67,5 +74,16 @@ onMounted(() => {
   width: 100%;
   display: flex;
   justify-content: center;
+}
+.link {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+.link:visited {
+  color: black;
+}
+.link:active {
+  color: black;
 }
 </style>
