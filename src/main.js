@@ -8,6 +8,8 @@ import { createVuetify } from 'vuetify'
 import * as components from 'vuetify/components'
 import * as directives from 'vuetify/directives'
 import 'vuetify/dist/vuetify.min.css'
+//import firebase from '../node_modules/firebase/app'
+
 
 
 const vuetify = createVuetify({
@@ -20,3 +22,4 @@ app.use(vuetify)
 app.use(router)
 
 app.mount('#app')
+
