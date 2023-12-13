@@ -32,7 +32,6 @@
         { title: 'Home', route: '/'},
         { title: 'Productos', route: '/categories'},
         { title: 'Carrito', route: '/cart' },
-        { title: 'Login' },
       ],
      
 
