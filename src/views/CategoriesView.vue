@@ -43,6 +43,9 @@ import { RouterLink } from 'vue-router';
 <style scoped>
 .categories {
   margin-bottom: 80px;
+  @media(max-width: 768px) {
+    width: 90vw;
+  }
 }
 .categories-title {
   text-align: center;
@@ -59,12 +62,18 @@ import { RouterLink } from 'vue-router';
   padding: 12px;
   border: 1px solid lightgray;
   border-radius: 16px;
+  
 }
 
 .categories-content {
   display: flex;
   column-gap: 16px;
   justify-content: center;
+  @media(max-width: 768px) {
+    flex-direction: column;
+    row-gap: 16px;
+    align-items: center;
+  }
 }
 .category-img {
   width: 50%;
