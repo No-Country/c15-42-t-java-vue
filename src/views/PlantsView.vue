@@ -62,12 +62,20 @@ onMounted(() => {
   display: flex;
   column-gap: 32px;
   justify-content: center;
+  @media(max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 24px;
+  }
 }
 .container__card {
   border: 1px solid lightgray;
   border-radius: 16px;
   padding: 16px 24px;
   width: 500px;
+  @media(max-width: 768px) {
+    width: 330px;
+  }
 }
 
 .card__name {
@@ -79,6 +87,11 @@ onMounted(() => {
   display: flex;
   column-gap: 24px;
   align-items: center;
+  @media(max-width: 768px) {
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 16px;
+  }
 }
 .container__price-car {
   display: flex;
